@@ -28,6 +28,7 @@
     box-shadow: 0 10px 15px rgba(0,0,0,.1);
     padding: 20px;
     padding-top: 130px;
+    flex-flow: row;
   }
 
   .container form .inputbox{
@@ -190,11 +191,11 @@
    }
 
    @media screen and (max-width:500px) {
-    .container .card-container{width: 400px;}
-    .container form .flexbox{gap: 19px;}
-    .container form{width: 90%;}
+    .container .card-container{width: 380px;}
+    .container form .flexbox{gap: 0px;}
+    .container form{width: 100%;}
     .visaimg{margin: 0px 30px;}
     .cvv-input{width: 100%; margin: 0px -15px;}
-    .inputbox{margin: 0px 20px;}
-    
+    .inputbox{margin: 0px 20px;} 
+    .visaimg{margin: -15px 0px;}
    }
