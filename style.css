@@ -1,0 +1,200 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+  *{
+   font-family: 'Poppins', sans-serif;
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+    outline: none; 
+   border: none;
+   text-decoration: none;
+   text-transform: uppercase;
+  }
+
+  .container{
+   min-height: 100vh;
+   background: rgb(220, 202, 171);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-flow: column;
+   padding-bottom: 10px;
+  }
+
+  .container form{
+    background: #fff;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    padding-top: 130px;
+  }
+
+  .container form .inputbox{
+    margin-top: 15px;
+    font-size: 21px;
+  }
+
+  .container form .inputbox span{
+    display: block;
+    color: #999;
+    padding-bottom: 5px;
+  }
+
+  .container form .inputbox input{
+    width: 98%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: #444; 
+
+  }
+
+  .container form .inputbox select{
+    width: 98%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: #444;  
+  }
+
+  .container form .flexbox{
+    display: flex;
+    gap: 40px;
+  }
+  .container form .flexbox .inputbox{
+    flex: 1 1 150px;
+  }
+
+  .container form .submit-btn{
+    width: 100%;
+    background: linear-gradient(45deg, rgb(211, 207, 214), deeppink);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: .2s linear;
+  }
+
+  .container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+  }
+
+  .container .card-container{
+    margin-bottom: -130px;
+    position: relative;
+    height: 300px;
+    width: 460px;
+  }
+
+  .container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background: linear-gradient(45deg, rgb(174, 172, 175), deeppink);
+    border-radius: 6px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding: 10px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+
+  }
+
+  .container .card-container .front .img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: -5px;
+  }
+
+  .container .card-container .front .card-number-box{
+    padding: 25px 0;
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .container .card-container .front .flexbox{
+    display: flex;
+  }
+
+  .container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+  }
+
+  .container .card-container .front .flexbox .box{
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .container .card-container .back{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, blueviolet, rgb(221, 212, 217));
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform: perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+  }
+
+  .container .card-container .back .strip{
+    background: #000;
+    width: 100%;
+    margin: 15px 0;
+    height: 50px;
+  }
+
+  .container .card-container .back .box{
+    padding: 0 25px;
+  }
+  
+  .container .card-container .back .box span{
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color: #333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .container .card-container .back .box img{
+    margin-top: 30px;
+    height: 35px;
+  }
+
+   /* @media queries */
+
+   @media screen and (max-width:701px) {
+    .container .card-container{width: 450px;}
+    .container form{width: 95%;}
+    .container form .flexbox{flex-basis: 65%; max-width: 65%;}
+    .container .card-container .front .img{width: 50px; padding: 10px;}
+    .visaimg{margin: 0px 75px;}
+    .cvv-input{width: 100%; padding: 0 10px;}
+    .inputbox{margin: 0px 20px;}
+   }
+
+   @media screen and (max-width:500px) {
+    .container .card-container{width: 400px;}
+    .container form .flexbox{gap: 19px;}
+    .container form{width: 90%;}
+    .visaimg{margin: 0px 30px;}
+    .cvv-input{width: 100%; margin: 0px -15px;}
+    .inputbox{margin: 0px 20px;}
+    
+   }
